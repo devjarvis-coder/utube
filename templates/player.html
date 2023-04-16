@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    .title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 12px;
+        color: #fff;
+    }
+
+    .decs {
+        color: #fff;
+    }
+
+    /* .container {
+        margin-top: 12px;
+        box-shadow: 5px 5px 150px 12px #2d3136;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+        background-color: rgba(255, 255, 255, .15);
+        backdrop-filter: blur(5px);
+    }  */
+
+    .card {
+        box-shadow: 5px 5px 150px 12px #2d3136;
+        background: #202225;
+        backdrop-filter: blur(10px);
+    }
+
+    video {
+        width: fit-content;
+        height: fit-content;
+    }
+</style>
+
+<div class="container mt-10">
+    <div class="card">
+        <div class="embed-responsive embed-responsive-16by9">
+            <video width="auto" height="auto" controls>
+                <source src="{{ data.video_file.url }}" type="video/mp4">
+            </video>
+        </div>
+        <div class="container">
+            <p class="title">{{ data.title }}</p>
+            <span class="decs">{{ data.description }}</span>
+            
+        </div>
+    </div>
+</div>
+
+        
+{% endblock %}

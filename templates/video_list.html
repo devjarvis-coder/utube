@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .custom-navbar-bg {
+        background-color: #0e0e0f;
+    }
+
+    .card {
+        background-color: #0e0e0f;
+        margin-top: 25px;
+        width:359px;
+        height: 202px;
+    }
+    .img{
+        width: 359px;
+        height: 202px;
+        object-fit: cover;
+        border-radius: 10px;
+        background: #0e0e0f;
+
+    }
+
+    .card-body {
+        color: #fff;
+    }
+    .card-title{
+        max-height: 6em;
+        /* Set the maximum height to three lines */
+        overflow: hidden;
+        /* Hide overflowing text */
+        text-overflow: ellipsis;
+        /* Add ellipsis at the end of the hidden text */
+        display: -webkit-box;
+        /* Set display property to -webkit-box for WebKit browsers */
+        -webkit-line-clamp: 2;
+        /* Set the number of lines to display in WebKit browsers */
+        -webkit-box-orient: vertical;
+        /* Set the box orientation to vertical for WebKit browsers */
+        line-height: 1.2em;
+        /* Set the line height as needed */
+    }
+
+    .card-text {
+        max-height: 6em;
+        /* Set the maximum height to three lines */
+        overflow: hidden;
+        /* Hide overflowing text */
+        text-overflow: ellipsis;
+        /* Add ellipsis at the end of the hidden text */
+        display: -webkit-box;
+        /* Set display property to -webkit-box for WebKit browsers */
+        -webkit-line-clamp: 1;
+        /* Set the number of lines to display in WebKit browsers */
+        -webkit-box-orient: vertical;
+        /* Set the box orientation to vertical for WebKit browsers */
+        line-height: 1.2em;
+        /* Set the line height as needed */
+    }
+</style>
+<div class="container-fluid">
+    <div class="row">
+        {% for video in videos %}
+        <div class="col-sm-3 mb-3 mb-sm-0">
+            <a href="{% url 'player' video.id %}">
+                <div class="card ">
+                    <img src="{{video.thumbnail.url}}" alt="{{video.title}}" class="img">
+<!--                <video width="auto" height="auto" controls>-->
+<!--                    <source src="{{ video.video_file.url }}" type="video/mp4">-->
+<!--                </video>-->
+                    <div class="card-body">
+                        <h5 class="card-title">{{ video.title }}</h5>
+                        <p class="card-text">{{ video.description }}
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    {% endblock %}

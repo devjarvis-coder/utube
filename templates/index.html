@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Home</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add custom CSS -->
+    <style>
+        body {
+            padding-top: 56px;
+        }
+
+        .video-thumbnail {
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .video-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .video-details {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .video-details a {
+            color: #777;
+        }
+
+        .video-details a:hover {
+            color: #ff0000;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+            <a class="navbar-brand" href="#">YouTube</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Trending</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Subscriptions</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://youtu.be/jaVdD4Z8UCs"
+                        allowfullscreen></iframe>
+                </div>
+                <h2 class="mt-3 video-title">Video Title</h2>
+                <p class="text-muted video-details">Channel Name &#8226; 1.2M views &#8226; 1 day ago</p>
+                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lacinia,
+                    enim eget dapibus varius, tortor metus aliquam tellus, vel efficitur tellus libero ac augue.
+                    Quisque fermentum nisl est, et scelerisque odio convallis vel. Nullam id magna augue. Nulla
+                    bibendum semper ipsum in fermentum. Fusce tristique efficitur congue. Praesent id dolor
+                    consequat, fermentum tortor in, feugiat magna. Nulla et est bibendum, ullamcorper odio ut,
+                    interdum massa. Ut finibus lacus a justo efficitur, nec efficitur est finibus.</p>
+            </div>
+            <div class="col-md-
+            <div class="col-md-4">
+                <h4>Trending Videos</h4>
+                <div class="card mt-3">
+                    <img src="https://via.placeholder.com/300" alt="Video Thumbnail" class="card-img-top video-thumbnail">
+                    <div class="card-body">
+                        <h5 class="card-title video-title">Video Title</h5>
+                        <p class="card-text video-details">Channel Name &#8226; 500K views &#8226; 2 days ago</p>
+                    </div>
+                </div>
+                <div class="card mt-3">
+                    <img src="https://via.placeholder.com/300" alt="Video Thumbnail" class="card-img-top video-thumbnail">
+                    <div class="card-body">
+                        <h5 class="card-title video-title">Video Title</h5>
+                        <p class="card-text video-details">Channel Name &#8226; 400K views &#8226; 3 days ago</p>
+                    </div>
+                </div>
+                <div class="card mt-3">
+                    <img src="https://via.placeholder.com/300" alt="Video Thumbnail" class="card-img-top video-thumbnail">
+                    <div class="card-body">
+                        <h5 class="card-title video-title">Video Title</h5>
+                        <p class="card-text video-details">Channel Name &#8226; 300K views &#8226; 4 days ago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
